@@ -3,8 +3,10 @@ package com.infohubmvc.application.views;
 
 import com.infohubmvc.application.components.appnav.AppNav;
 import com.infohubmvc.application.components.appnav.AppNavItem;
-import com.infohubmvc.application.views.about.AboutView;
-import com.infohubmvc.application.views.helloworld.HelloWorldView;
+import com.infohubmvc.application.data.entity.Condominium;
+import com.infohubmvc.application.views.condominium.CondominiumView;
+import com.infohubmvc.application.views.helloworld.HouseView;
+import com.infohubmvc.application.views.users.UserView;
 import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.applayout.AppLayout;
 import com.vaadin.flow.component.applayout.DrawerToggle;
@@ -56,8 +58,9 @@ public class MainLayout extends AppLayout {
         AppNav nav = new AppNav();
         nav.addClassNames("app-nav");
 
-        nav.addItem(new AppNavItem("Hello World", HelloWorldView.class, "la la-globe"));
-        nav.addItem(new AppNavItem("About", AboutView.class, "la la-file"));
+        nav.addItem(new AppNavItem("Houses", HouseView.class, "la la-globe"));
+        nav.addItem(new AppNavItem("Users", UserView.class, "la la-file"));
+        nav.addItem(new AppNavItem("Condominiums", CondominiumView.class, "la la-file"));
 
         return nav;
     }
